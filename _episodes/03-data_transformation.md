@@ -90,12 +90,16 @@ Once we've imported the library, we can ask the library to read our data file fo
 ```python
 pd.read_csv("filename.csv)
 ```
+pandas is a commonly used library for working with and analysing data. However, we will be working with a different package for the remainder of this course. If you would like to learn more about data manipulation and analysis using pandas, we recommend checking out [Data Analysis and Visualization with Python for Social Scientists](https://datacarpentry.org/python-socialsci/).
+
 ## numpy
 
 The second package that we will present is called
 [NumPy](https://numpy.org/doc/stable "NumPy Documentation"), which stands for Numerical Python. 
 In general, you should use this library when you want to do fancy things with lots of numbers,
-especially if you have matrices or arrays. We will be using this package to work with our clinical trial inflammation data. 
+especially if you have matrices or arrays. Numpy matrices are typically lighter weight with better performance, particularly when working with large datasets. 
+
+We will be using this package to work with our clinical trial inflammation data. 
 
 To tell Python that we'd like to start using NumPy,
 we need to [import](../learners/reference.md#import) it:
