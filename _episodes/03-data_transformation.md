@@ -40,7 +40,7 @@ a new piece of equipment adds functionality to a lab space. Just like in the lab
 many libraries can sometimes complicate and slow down your programs - so we only import what we
 need for each program. There are a couple common Python libraries to load (and work with data). 
 
-The first library we will present is called [pandas](https://pandas.pydata.org/docs/index.html) The pandas package is a common package for data analysis in Python, particularly for relational data. To tell Python that we'd like to start using NumPy, we need to [import](../learners/reference.md#import) it: 
+The first library we will present is called [pandas](https://pandas.pydata.org/docs/index.html) The pandas package is a common package for data analysis in Python, particularly for relational data. To tell Python that we'd like to start using pandas, we need to [import](../learners/reference.md#import) it: 
 
 ```python
 import pandas
