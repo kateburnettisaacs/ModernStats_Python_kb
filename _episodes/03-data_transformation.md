@@ -28,29 +28,41 @@ that can be called upon when needed.
 
 ## Loading data into Python
 
-To begin processing the clinical trial inflammation data, we need to load it into Python. Python can work with many different file types. Text files can be loading into Python by using the base Python function
+To begin processing the clinical trial inflammation data, we need to load it into Python. Python can work with many different file types. Text files can be loaded into Python by using the base Python function
 ```python
 Open("filename.txt", "r") 
 ```
 where "r" means read only, or if you want to write to the file, you can use "w". 
 
-However, our patient data is in a csv. file and so, in order to load our dataset, we need a library called
+However, our patient data is in a csv. file and so, in order to load our dataset, we need to use a library to load our data. Python has hundreds of thousands of libraries to choose from to help carry out your work. Importing a library is like getting a piece of lab equipment out of a storage locker and setting it
+up on the bench. Libraries provide additional functionality to the basic Python package, much like
+a new piece of equipment adds functionality to a lab space. Just like in the lab, importing too
+many libraries can sometimes complicate and slow down your programs - so we only import what we
+need for each program. There are a couple common Python libraries to load (and work with data). 
+
+The first library we will present is called [pandas](https://pandas.pydata.org/docs/index.html) The pandas package is a common package for data analysis in Python, particularly for relational data. To tell Python that we'd like to start using NumPy, we need to [import](../learners/reference.md#import) it: 
+
+```python
+import pandas
+```
+Once we've imported the library, we can ask the library to read our data file for us:
+
+```python
+pandas.read_csv("filename.csv)
+```
+
+The second package that we will present is called
 [NumPy](https://numpy.org/doc/stable "NumPy Documentation"), which stands for Numerical Python.
 In general, you should use this library when you want to do fancy things with lots of numbers,
-especially if you have matrices or arrays. To tell Python that we'd like to start using NumPy,
+especially if you have matrices or arrays. We will be using this package to work with our clinical trial inflammation data. 
+
+To tell Python that we'd like to start using NumPy,
 we need to [import](../learners/reference.md#import) it:
 
 ```python
 import numpy
 ```
-
-Importing a library is like getting a piece of lab equipment out of a storage locker and setting it
-up on the bench. Libraries provide additional functionality to the basic Python package, much like
-a new piece of equipment adds functionality to a lab space. Just like in the lab, importing too
-many libraries can sometimes complicate and slow down your programs - so we only import what we
-need for each program.
-
-Once we've imported the library, we can ask the library to read our data file for us:
+Now that we have imported the library, we can ask the library to read our data file for us:
 
 ```python
 numpy.loadtxt(fname='inflammation-01.csv', delimiter=',')
